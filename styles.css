@@ -1,5 +1,47 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+.container {
+            /* Makes the container take up the full height of the viewport */
+  }
+  
+
+h1 {
+  color: #4caf50;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 15px;
+    margin-right: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
 .output {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid black;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
 }
