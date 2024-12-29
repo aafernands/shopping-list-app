@@ -1,13 +1,13 @@
 const savePerson = () => {
-  const name = document.getElementById("name").value;
-  const age = document.getElementById("age").value;
+  const item = document.getElementById("name").value;
+  const qty = document.getElementById("qty").value;
 
-  const person = { name, age };
+  const items = { item, age };
 
-  localStorage.setItem("person", JSON.stringify(person));
+  localStorage.setItem("items", JSON.stringify(items));
 
-  displayPerson();
+  displayItems();
 
-  alert(`Person saved: ${name}, ${age}`);
+  alert(`Items saved: ${item}, ${qty}`);
 };
 
