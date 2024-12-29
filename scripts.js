@@ -1,10 +1,10 @@
-const saveItem = () => {
+const saveOnList = () => {
   const item = document.getElementById("item").value;
   const qty = document.getElementById("qty").value;
 
-  const items = { item, qty };
+  const itemOnList = { item, qty };
 
-  localStorage.setItem("items", JSON.stringify(items));
+  localStorage.setItem("itemOnList", JSON.stringify(itemOnList));
 
   displayItems();
 
@@ -13,10 +13,10 @@ const saveItem = () => {
 
 const displayItems = () => {
   const output = document.getElementById("output");
-  const items = localStorage.getItem("items");
+  const itemOnList = localStorage.getItem("itemOnList");
 
-  if (items) {
-    const parsedItems = JSON.parse(items);
+  if (itemOnList) {
+    const parsedItems = JSON.parse(itemOnList);
     output.innerHTML = `<strong> Stored Items: </strong> <br>
                           Item: ${parsedItems.item} <br>
                           Quantity: ${parsedItems.qty}`;
@@ -25,6 +25,11 @@ const displayItems = () => {
   }
 };
 
-const deleteItem = () => {
+const deleteItems = () => {
+    localStorage.removeItem("itemOnList");
+    displayItems();
+
   alert("Item Deleted");
 };
+
+displayItems();
